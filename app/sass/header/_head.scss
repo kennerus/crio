@@ -29,22 +29,6 @@
 				@include breakpoint(max-width 400px) {
 					align-self: flex-start;
 				}
-
-				#call-order {
-					padding: 0;
-					font-family: 'Gotham-Med', sans-serif;
-					font-size: 16px;
-					background-color: transparent;
-					color: #00aeff;
-					border: none;
-					border-bottom: 1px solid #00aeff;
-					line-height: 35px;
-					cursor: pointer;
-					&:hover {
-						border-bottom: 1px solid transparent;
-						opacity: 0.8;
-					}
-				}
 			}
 
 			.header__describe {
@@ -112,11 +96,12 @@
 
 						div:first-child {
 							margin-bottom: 30px;
+
 							input {
 								margin: 10px 0;
 								padding: 12px 0 12px 20px;
 								border-radius: 20px;
-								box-shadow: 0 0 13px rgba(29, 29, 30, 0.1);
+								box-shadow: 0 0 13px rgba(0, 126, 255, 0.25);
 								background-color: #f7f8f9;
 								font-size: 13px;
 								color: #9ea2a1;
@@ -125,11 +110,15 @@
 
 							#name, #email {
 								margin-right: 10px;
+
+								@include breakpoint(max-width 476px) {
+									margin-right: 0;
+								}
 							}
 
-							#tel {
+							/*#tel {
 								width: 230px;
-							}
+							}*/
 						}
 
 						.checkbox {
@@ -151,6 +140,12 @@
 							    display: inline-block;
 							    vertical-align: middle;
 							    cursor: pointer;
+							}
+
+							.label {
+								@include breakpoint(max-width 576px) {
+									max-width: 200px;
+								}
 							}
 
 							label {

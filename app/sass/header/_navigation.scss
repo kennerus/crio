@@ -3,6 +3,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 	@include breakpoint(max-width 1200px) {
 		width: 100%;
 		position: absolute;
@@ -72,7 +73,7 @@
 				margin-top: 0;
 			}
 		}
-		@include breakpoint(max-width 400px) {
+		@include breakpoint(max-width 450px) {
 			width: 100%;
 			margin: 5px 0;
 		}
@@ -144,21 +145,21 @@
 	}
 
 	.expand {
-			width: 100%;
-			margin: 5px 0;
-			position: absolute;
-			top: 45px;
-			flex-wrap: wrap;
-			background-color: rgba(0,125,255,.9);
-			transition: all 0.5s;
-			visibility: visible;
-			overflow-y: hidden;
-			text-align: center;
-			z-index: 2;
-			@include breakpoint(min-width 576px) {
-				width: 230px;
-				top: 10px;
-				left: 200px;
-			}
+		width: 100%;
+		margin: 5px 0;
+		position: absolute;
+		top: 45px;
+		flex-wrap: wrap;
+		background-color: rgba(0,125,255,.9);
+		transition: all 0.5s;
+		visibility: visible;
+		overflow-y: hidden;
+		text-align: center;
+		z-index: 2;
+		@include breakpoint(min-width 576px) {
+			width: 230px;
+			top: 10px;
+			left: 200px;
 		}
+	}
 }
