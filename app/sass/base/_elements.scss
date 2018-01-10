@@ -1,5 +1,5 @@
     #calculate__form, #advantages__form, #modal__form {
-    	position: relative;
+    	  position: relative;
         padding: 67px 30px;
         display: flex;
         flex-direction: column;
@@ -243,7 +243,8 @@
   z-index: 1100;
   cursor: pointer;
 }
-.modal__trigger {
+.modal__trigger,
+.modal-fb {
   position: relative;
   display: inline-block;
   line-height: 1;
@@ -313,4 +314,19 @@
 }
 .demo-close:hover {
   background: rgba(0,0,0,0.6);
+}
+
+#modal_conf {
+  display: none;
+  max-width: 800px;
+}
+
+@include breakpoint(max-width 322px) {
+  #modal_conf {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    padding: 10px;
+  }
 }
